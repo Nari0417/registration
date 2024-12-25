@@ -1,0 +1,72 @@
+1  sudo yum install docker -y
+    2  service docker start
+    3  service docker status
+    4  sudo curl -L "https://github.com/docker/compose/releases/download/1.29.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+    5  ls /usr/local/bin/
+    6  sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+    7  ls /usr/bin/docker-compose
+    8  cd /usr/bin/docker-compose
+    9  sudo chmod +x /usr/local/bin/docker-compose
+   10  cd /usr/local/bin/docker-compose
+   11  cd /usr/local/bin/
+   12  ll
+   13  cd
+   14  docker-compose version
+   15  docker ps
+   16  docker ps -a
+   17  docker images
+   18  vim docker-compose.yml
+   19  cat docker-compose.yml
+   20  vim index.html
+   21  ls -lrt
+   22  docker build -t paytrain:v1 .
+   23  vim Dockerfile
+   24  cat Dockerfile
+   25  docker build -t paytrain:v1 .
+   26  docker images
+   27  ls -lrt
+   28  vim index.html
+   29  docker build -t paytrain:v1 .
+   30  vim index.html
+   31  docker build -t paydth:v1 .
+   32  vim index.html
+   33  docker build -t payrecharge:v1 .
+   34  docker ps
+   35  docker images
+   36  vim index.html
+   37  docker build -t paymovies:v1 .
+   38  docker-compose up -d
+   39  docker images
+   40  ls -lrt
+   41  docker-compose up
+   42  ls -lrt
+   43  cat docker-compose.yml
+   44  docker-compose version
+   45  docker-compose up -d
+   46  vim docker-compose.yml
+   47  docker-compose up -d
+   48  ls -lrt
+   49  chmod +x docker-compose.yml
+   50  ls -lrt
+   51  docker-compose up -d
+   52  cat docker-compose.yml
+   53  docker images
+   54  vim docker-compose.yml
+   55  docker-compose up -d
+   56  docker-compose down
+   57  docker images
+   58  docker ps -a
+   59  docker-compose up -d
+   60  docker ps -a
+   61  kill d25a0f668496
+   62  docker ps -a
+   63  kill d25a0f668496 45ae19f88c14 190b48eafc48 e07179f1372e
+   64  kill e07179f1372e
+   65  docker ps -a
+   66  kill d25a0f668496
+   67  docker ps -a
+   68  docker kill d25a0f668496
+   69  docker ps -a
+   70  docker-compose up -d
+   71  docker ps -a
+   72  history
