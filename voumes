@@ -1,0 +1,70 @@
+---------------------
+yum install docker -y
+service docker start
+service docker status
+====================create volumes from docker file==================================
+vim Dockerfile
+
+FROM ubuntu
+VOLUME ["/V011"]
+
+docker build -t swiggy:v1 .
+docker run -it --name count1 swiggy:v1
+
+cd voll
+touch {1..5}
+docker run -it --name count2 --volumes-from count1 --privileged=true ubuntu
+
+
+
+====================create volumes from commands========================================
+
+
+
+docker run -it --name count3 -v /vo12 ubuntu
+
+cd v012
+touch nari{1..5}
+
+docker run -it --name count4 --volumes-from count3 --privileged=true ubuntu
+
+
+=================================create volumes from mounting==================================
+
+first we need to create volumes in our local machine
+
+
+docker volume create v34
+cd v34
+touch Gopi{1..3}
+docker run -it --name count100 --mount "source=v34",destination=/v34 "ubuntu"
+
+-------------------------------------------------------------
+
+ docker volume ls
+cd v0234
+    {
+        "CreatedAt": "2024-12-25T09:12:39Z",
+        "Driver": "local",
+        "Labels": null,
+        "Mountpoint": "/var/lib/docker/volumes/v0234/_data",
+        "Name": "v0234",
+        "Options": null,
+        "Scope": "local"
+    }
+cd  /var/lib/docker/volumes/v0234/_data
+ touch good{1..5}
+ ls -lrt
+
+
+
+
+====================================create a volumes from local normal user to conatiner======================
+
+
+cd /home/ecc2-user
+
+touch general{1..5}
+
+docker run -it --name count14 -v /home/ec2-user:/abcsdd ubuntu
+
